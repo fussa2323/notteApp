@@ -26,15 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-//        
-//        // Sets background to a blank/empty image
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
-//        // Sets shadow (line below the bar) to a blank image
-//        UINavigationBar.appearance().shadowImage = UIImage()
-//        // Sets the translucent background color
-//        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.3, blue: 0.5, alpha: 0.3)
-//        // Set translucent. (Default value is already true, so this can be removed if desired.)
-//        UINavigationBar.appearance().translucent = false
+        
         return true
     }
 

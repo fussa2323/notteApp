@@ -7,24 +7,35 @@
 //
 
 import UIKit
+import Parse
 
 class DetaiViewController: UIViewController {
 
-    //選択されたCellのおブジェクとを保持
+    //選択されたCellのobjectを保持
     var param:AnyObject!
+    var infoQuery: PFQuery = PFQuery(className: "Info")
     @IBOutlet weak var detailTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailTextView.text = param.objectForKey("infoDetail") as? String
-        
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func deleteButtonAction(sender: AnyObject) {
+        var objId:String = param.objectId!!
+        
+        infoQuery.getObjectInBackgroundWithId(objId) {
+            (targetInfo: PFObject?, error: NSError?) -> Void in
+            if error == nil && targetInfo != nil {
+                targetInfo?.deleteInBackground()
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            } else {
+                println(error)
+            }
+        }
+    }
 }

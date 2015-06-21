@@ -11,10 +11,7 @@ import Parse
 
 class VacantSeatViewController: UIViewController {
     	
-    @IBOutlet weak var Seat1: UILabel!
-    @IBOutlet weak var Seat2: UILabel!
-    @IBOutlet weak var Seat1Button: UIButton!
-    @IBOutlet weak var Seat2Button: UIButton!
+ 
     //Seatsの情報をストア
     var allSeatsData: NSMutableArray = NSMutableArray()
     //Seatの空き情報のための変数
@@ -52,29 +49,28 @@ class VacantSeatViewController: UIViewController {
     //Seatの空き情報を描画
     func drawSeatsVacData(){
         for SeatData in self.allSeatsData {
-            var seat_Id:Int = (SeatData.objectForKey("seat_Id") as? Int)!
-            switch seat_Id {
-            case 1:
-                if ((SeatData.objectForKey("vac") as? Int) == self.vacant){
-                    Seat1.text = "空"
-                    Seat1Button.titleLabel?.text = "空"
-                } else {
-                    Seat1.text = "客"
-                    Seat1Button.titleLabel?.text = "客"
-                }
-            case 2:
-                if ((SeatData.objectForKey("vac") as? Int) == self.vacant){
-                    Seat2.text = "空"
-                    Seat2Button.titleLabel?.text = "空"
-                } else {
-                    Seat2.text = "客"
-                    Seat2Button.titleLabel?.text = "客"
-                }
-            default:
-                break
-            }
+//            var seat_Id:Int = (SeatData.objectForKey("seat_Id") as? Int)!
+//            switch seat_Id {
+//            case 1:
+//                if ((SeatData.objectForKey("vac") as? Int) == self.vacant){
+//                    Seat1.text = "空"
+//                    Seat1Button.titleLabel?.text = "空"
+//                } else {
+//                    Seat1.text = "客"
+//                    Seat1Button.titleLabel?.text = "客"
+//                }
+//            case 2:
+//                if ((SeatData.objectForKey("vac") as? Int) == self.vacant){
+//                    Seat2.text = "空"
+//                    Seat2Button.titleLabel?.text = "空"
+//                } else {
+//                    Seat2.text = "客"
+//                    Seat2Button.titleLabel?.text = "客"
+//                }
+//            default:
+//                break
+//            }
         }
-        
     }
     
     //DB上のseat_IdをもつSeatのVacデータを更新する
@@ -82,41 +78,43 @@ class VacantSeatViewController: UIViewController {
         for SeatData in self.allSeatsData {
             var seat_Id:Int = (SeatData.objectForKey("seat_Id") as? Int)!
             if seat_Id == selectSeat_Id {
-                var seatDataObjectId: String = (SeatData.objectForKey("objectId") as? String)!
+                var seatDataObjectId: String = SeatData.objectId!!
                 var seatsQuery:PFQuery =  PFQuery(className: "Seats")
                 seatsQuery.getObjectInBackgroundWithId(seatDataObjectId) {
                     (targetSeat: PFObject?, error: NSError?) -> Void in
-                    if error == nil && targetSeat != nil {
-                        var seatVac:Int = (targetSeat?.objectForKey("vac") as? Int)!
-                        
-                        if (seatVac == self.vacant){
-                            println(seatVac)
-                        }else{
-                            
-                        }
-                        
-                    } else {
+                    if error != nil {
                         println(error)
+                    } else if let targetSeat = targetSeat {
+                        var seatVac:Int = (targetSeat.objectForKey("vac") as? Int)!
+                        if (seatVac == self.vacant){
+                            targetSeat["vac"] = self.guest
+                            targetSeat.saveInBackground()
+                        }else{
+                            targetSeat["vac"] = self.vacant
+                            targetSeat.saveInBackground()
+                        }
                     }
-                }//closer
+                }//Closer
             }//if
         }//for
     }
     
     
-    @IBAction func seat1ButtonAction(sender: AnyObject) {
-        self.setSeatsVacData(1)
-    }
-    @IBAction func seat2ButtonAction(sender: UIButton) {
-        self.setSeatsVacData(2)
-    }
+//    @IBAction func seat1ButtonAction(sender: AnyObject) {
+//        self.setSeatsVacData(1)
+//    }
+//    @IBAction func seat2ButtonAction(sender: UIButton) {
+//        self.setSeatsVacData(2)
+//    }
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.title = "Seats"
-        // Do any additional setup after loading the view.
+        //Title画像
+        let image = UIImage(named: "navicon_white_seats.png")
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRectMake(0, 0, 36, 33)
+        self.navigationItem.titleView = imageView
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -128,17 +126,5 @@ class VacantSeatViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

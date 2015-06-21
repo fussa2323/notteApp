@@ -16,21 +16,25 @@ class TopEditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Edit Information"
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
   
     @IBAction func saveButtonAction(sender: AnyObject) {
         var info:PFObject = PFObject(className: "Info")
         info["infoTitle"] = titleTextField.text
         info["infoDetail"] = detailTextView.text
+
+        info.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            } else {
+                // There was a problem, check error.description
+            }
+        }
         
-        info.saveInBackground()
-        
-        self.navigationController?.popToRootViewControllerAnimated(true);        return
     }
 }

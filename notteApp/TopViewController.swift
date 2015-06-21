@@ -17,7 +17,6 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
     //Information 用のデータ定義
     var allInfoData:NSMutableArray = NSMutableArray()
     
-    
     //Informationテーブルのデータをすべて読み込む
     @IBAction func loadInfoData(){
         //初期化
@@ -44,7 +43,8 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
             //NSArray型にいったん格納して順番をリバースさせる
             let array: NSArray = self.allInfoData.reverseObjectEnumerator().allObjects
             self.allInfoData = NSMutableArray(array: array)
-            self.tableView.reloadData()       }
+            self.tableView.reloadData()
+        }
     }
 
     
@@ -58,6 +58,11 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
         //navbar tabbar Design
         self.navigationController?.navigationBar.backgroundColor =  UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         self.tabBarController?.tabBar.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        //Title画像
+        let image = UIImage(named: "navicon_white_top.png")
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRectMake(0, 0, 36, 33)
+        self.navigationItem.titleView = imageView
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -65,7 +70,6 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     /*
@@ -91,6 +95,8 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell:InfoTableViewCell = (tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! InfoTableViewCell)
         let info:PFObject = (self.allInfoData.objectAtIndex(indexPath.row) as! PFObject)
        
+        //cellの右側に>を表示
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         //alpha = 0
         cell.infoCreatedAtLabel.alpha = 0
         cell.infoTitleLabel.alpha = 0
