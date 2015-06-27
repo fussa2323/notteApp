@@ -26,6 +26,7 @@
 		474C23951B36A01B00D8628F /* top_bg2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C23931B36A01B00D8628F /* top_bg2@3x.png */; };
 		474C239C1B36AB8900D8628F /* seats_table_guest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C239A1B36AB8900D8628F /* seats_table_guest@2x.png */; };
 		474C239D1B36AB8900D8628F /* seats_table_vacant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C239B1B36AB8900D8628F /* seats_table_vacant@2x.png */; };
+		47619A841B3D6C2C009F32B1 /* CouponEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */; };
 		47737A401B2973D300F56C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47737A3F1B2973D300F56C65 /* AppDelegate.swift */; };
 		47737A471B2973D300F56C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47737A451B2973D300F56C65 /* Main.storyboard */; };
 		47737A4C1B2973D300F56C65 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47737A4A1B2973D300F56C65 /* LaunchScreen.xib */; };
@@ -84,6 +85,8 @@
 		47D874B61B35C476002B1D24 /* top_information2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D874B41B35C476002B1D24 /* top_information2@3x.png */; };
 		47D874B91B35CD84002B1D24 /* top_information3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D874B71B35CD84002B1D24 /* top_information3@2x.png */; };
 		47D874BA1B35CD84002B1D24 /* top_information3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D874B81B35CD84002B1D24 /* top_information3@3x.png */; };
+		47FC68E31B3E9F590011737B /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC68E11B3E9F590011737B /* CouponTableViewController.swift */; };
+		47FC68E41B3E9F590011737B /* CouponTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47FC68E21B3E9F590011737B /* CouponTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,7 @@
 		474C23931B36A01B00D8628F /* top_bg2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bg2@3x.png"; sourceTree = "<group>"; };
 		474C239A1B36AB8900D8628F /* seats_table_guest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seats_table_guest@2x.png"; sourceTree = "<group>"; };
 		474C239B1B36AB8900D8628F /* seats_table_vacant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seats_table_vacant@2x.png"; sourceTree = "<group>"; };
+		47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponEditViewController.swift; sourceTree = "<group>"; };
 		47737A3A1B2973D300F56C65 /* notteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47737A3E1B2973D300F56C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47737A3F1B2973D300F56C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 		47D874B41B35C476002B1D24 /* top_information2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_information2@3x.png"; sourceTree = "<group>"; };
 		47D874B71B35CD84002B1D24 /* top_information3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_information3@2x.png"; sourceTree = "<group>"; };
 		47D874B81B35CD84002B1D24 /* top_information3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_information3@3x.png"; sourceTree = "<group>"; };
+		47FC68E11B3E9F590011737B /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
+		47FC68E21B3E9F590011737B /* CouponTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,9 +253,12 @@
 				47737A781B29741800F56C65 /* VacantSeatViewController.swift */,
 				4787C1DE1B2EFBD400F8A9B1 /* SeatsEditViewController.swift */,
 				47737A7A1B29743400F56C65 /* CouponViewController.swift */,
+				47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */,
 				470B31CA1B32CCD50079E9C1 /* CouponTableViewCell.swift */,
 				470B31CB1B32CCD60079E9C1 /* CouponTableViewCell.xib */,
 				47737A7C1B29747800F56C65 /* OriginalNavigationController.swift */,
+				47FC68E11B3E9F590011737B /* CouponTableViewController.swift */,
+				47FC68E21B3E9F590011737B /* CouponTableViewController.xib */,
 				477576C21B3551F8007FB26F /* Images.xcassets */,
 				47737A3D1B2973D300F56C65 /* Supporting Files */,
 			);
@@ -510,6 +519,7 @@
 				47D874AE1B35C41B002B1D24 /* navicon_white_logo@3x.png in Resources */,
 				4787C1D21B2EE0AE00F8A9B1 /* tabicon_white_coupon@2x.png in Resources */,
 				4787C1D71B2EE0B700F8A9B1 /* tabicon_white_seats@3x.png in Resources */,
+				47FC68E41B3E9F590011737B /* CouponTableViewController.xib in Resources */,
 				47D8749E1B35C310002B1D24 /* admin_bg@3x.png in Resources */,
 				4787C1DA1B2EE0C100F8A9B1 /* tabicon_white_top@2x.png in Resources */,
 				47D874BA1B35CD84002B1D24 /* top_information3@3x.png in Resources */,
@@ -549,6 +559,7 @@
 				4787C1DF1B2EFBD400F8A9B1 /* SeatsEditViewController.swift in Sources */,
 				47737A401B2973D300F56C65 /* AppDelegate.swift in Sources */,
 				47737A7D1B29747800F56C65 /* OriginalNavigationController.swift in Sources */,
+				47619A841B3D6C2C009F32B1 /* CouponEditViewController.swift in Sources */,
 				47737A791B29741800F56C65 /* VacantSeatViewController.swift in Sources */,
 				47737A731B2973E500F56C65 /* RAMTransitionItemAnimation.swift in Sources */,
 				4787C1E11B2F095B00F8A9B1 /* InfoTableViewCell.swift in Sources */,
@@ -562,6 +573,7 @@
 				470B31CC1B32CCD60079E9C1 /* CouponTableViewCell.swift in Sources */,
 				47737A711B2973E500F56C65 /* RAMFumeAnimation.swift in Sources */,
 				47737A6F1B2973E500F56C65 /* RAMBounceAnimation.swift in Sources */,
+				47FC68E31B3E9F590011737B /* CouponTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
