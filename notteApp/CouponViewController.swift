@@ -24,8 +24,9 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationItem.titleView = imageView
         
         self.navigationController?.navigationBar.backgroundColor =  UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        self.tableView.registerNib(UINib(nibName: "CouponTableViewCell", bundle: nil), forCellReuseIdentifier: "CouponTableViewCell")
+        //tableView Delegate
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,9 +35,7 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidAppear(animated: Bool) {
         self.loadCouponData()
-        self.tableView.showsVerticalScrollIndicator = false
         super.viewDidAppear(animated)
-        self.tableView.showsVerticalScrollIndicator = true
     }
     
     //Informationテーブルのデータをすべて読み込む
@@ -70,37 +69,46 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
+    /*
+    Cellが選択された際に呼び出される.
+    */
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
     
+    /*
+    Cellの総数を返す.
+    */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return self.allCouponData.count
     }
     
-    
+    /*
+    Cellに値を設定する.
+    */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : CouponTableViewCell = tableView.dequeueReusableCellWithIdentifier("CouponTableViewCell") as! CouponTableViewCell
-        let coupon:PFObject = (self.allCouponData.objectAtIndex(indexPath.row) as! PFObject)
         
+        
+        let cell:CouponTableViewCell = (tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CouponTableViewCell)
+        let coupon:PFObject = (self.allCouponData.objectAtIndex(indexPath.row) as! PFObject)
+
         //alpha = 0
         
+        //labelに値を格納
+        cell.serviceLabel.text = coupon.objectForKey("product_name") as? String
+        cell.priceLabel.text = coupon.objectForKey("price") as? String
+        cell.dateLabel.text = coupon.objectForKey("limit") as? String
+        cell.detailLabel.text = coupon.objectForKey("detail") as? String
         
-        //textViewにinfoTitleを表示
-        cell.limitDateLavel.text = coupon.objectForKey("limit") as? String
         
-//        UIView.animateWithDuration(0.5, animations: {
-//            //alpha = 1
-//            
-//        })
-
+        
+        UIView.animateWithDuration(0.5, animations: {
+            //alpha = 1
+    
+        })
+        
         return cell
     }
-    
     
 
     

@@ -9,12 +9,13 @@
 import UIKit
 
 class CouponTableViewCell: UITableViewCell {
-
     
-    @IBOutlet weak var limitDateLavel: UILabel!
-    @IBOutlet weak var productNameLabel: UILabel!
+    
+    @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

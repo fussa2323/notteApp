@@ -19,7 +19,13 @@
 		470B31C71B32AAA30079E9C1 /* top_information@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 470B31C51B32AAA30079E9C1 /* top_information@3x.png */; };
 		470B31C91B32B0CA0079E9C1 /* top-kari.png in Resources */ = {isa = PBXBuildFile; fileRef = 470B31C81B32B0CA0079E9C1 /* top-kari.png */; };
 		470B31CC1B32CCD60079E9C1 /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470B31CA1B32CCD50079E9C1 /* CouponTableViewCell.swift */; };
-		470B31CD1B32CCD60079E9C1 /* CouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470B31CB1B32CCD60079E9C1 /* CouponTableViewCell.xib */; };
+		4724B8321B4290EC00EC687D /* dotsline_bold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4724B82C1B4290EC00EC687D /* dotsline_bold@2x.png */; };
+		4724B8331B4290EC00EC687D /* dotsline_bold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4724B82D1B4290EC00EC687D /* dotsline_bold@3x.png */; };
+		4724B8341B4290EC00EC687D /* dotsline_slash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4724B82E1B4290EC00EC687D /* dotsline_slash@2x.png */; };
+		4724B8351B4290EC00EC687D /* dotsline_slash@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4724B82F1B4290EC00EC687D /* dotsline_slash@3x.png */; };
+		4724B8361B4290EC00EC687D /* dotsline_thin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4724B8301B4290EC00EC687D /* dotsline_thin@2x.png */; };
+		4724B8371B4290EC00EC687D /* dotsline_thin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4724B8311B4290EC00EC687D /* dotsline_thin@3x.png */; };
+		4724B8391B4293D400EC687D /* font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4724B8381B4293AC00EC687D /* font.ttf */; };
 		474C23901B369FEA00D8628F /* splash_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C238E1B369FEA00D8628F /* splash_bg@2x.png */; };
 		474C23911B369FEA00D8628F /* splash_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C238F1B369FEA00D8628F /* splash_bg@3x.png */; };
 		474C23941B36A01B00D8628F /* top_bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C23921B36A01B00D8628F /* top_bg2@2x.png */; };
@@ -27,6 +33,7 @@
 		474C239C1B36AB8900D8628F /* seats_table_guest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C239A1B36AB8900D8628F /* seats_table_guest@2x.png */; };
 		474C239D1B36AB8900D8628F /* seats_table_vacant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C239B1B36AB8900D8628F /* seats_table_vacant@2x.png */; };
 		47619A841B3D6C2C009F32B1 /* CouponEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */; };
+		476A0C5C1B467FC700BB034C /* CouponDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476A0C5B1B467FC700BB034C /* CouponDetailViewController.swift */; };
 		47737A401B2973D300F56C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47737A3F1B2973D300F56C65 /* AppDelegate.swift */; };
 		47737A471B2973D300F56C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47737A451B2973D300F56C65 /* Main.storyboard */; };
 		47737A4C1B2973D300F56C65 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47737A4A1B2973D300F56C65 /* LaunchScreen.xib */; };
@@ -85,8 +92,6 @@
 		47D874B61B35C476002B1D24 /* top_information2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D874B41B35C476002B1D24 /* top_information2@3x.png */; };
 		47D874B91B35CD84002B1D24 /* top_information3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D874B71B35CD84002B1D24 /* top_information3@2x.png */; };
 		47D874BA1B35CD84002B1D24 /* top_information3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D874B81B35CD84002B1D24 /* top_information3@3x.png */; };
-		47FC68E31B3E9F590011737B /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC68E11B3E9F590011737B /* CouponTableViewController.swift */; };
-		47FC68E41B3E9F590011737B /* CouponTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47FC68E21B3E9F590011737B /* CouponTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +117,13 @@
 		470B31C51B32AAA30079E9C1 /* top_information@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_information@3x.png"; sourceTree = "<group>"; };
 		470B31C81B32B0CA0079E9C1 /* top-kari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-kari.png"; sourceTree = "<group>"; };
 		470B31CA1B32CCD50079E9C1 /* CouponTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
-		470B31CB1B32CCD60079E9C1 /* CouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponTableViewCell.xib; sourceTree = "<group>"; };
+		4724B82C1B4290EC00EC687D /* dotsline_bold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotsline_bold@2x.png"; sourceTree = "<group>"; };
+		4724B82D1B4290EC00EC687D /* dotsline_bold@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotsline_bold@3x.png"; sourceTree = "<group>"; };
+		4724B82E1B4290EC00EC687D /* dotsline_slash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotsline_slash@2x.png"; sourceTree = "<group>"; };
+		4724B82F1B4290EC00EC687D /* dotsline_slash@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotsline_slash@3x.png"; sourceTree = "<group>"; };
+		4724B8301B4290EC00EC687D /* dotsline_thin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotsline_thin@2x.png"; sourceTree = "<group>"; };
+		4724B8311B4290EC00EC687D /* dotsline_thin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotsline_thin@3x.png"; sourceTree = "<group>"; };
+		4724B8381B4293AC00EC687D /* font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.ttf; sourceTree = "<group>"; };
 		474C238E1B369FEA00D8628F /* splash_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_bg@2x.png"; sourceTree = "<group>"; };
 		474C238F1B369FEA00D8628F /* splash_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_bg@3x.png"; sourceTree = "<group>"; };
 		474C23921B36A01B00D8628F /* top_bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bg2@2x.png"; sourceTree = "<group>"; };
@@ -120,6 +131,7 @@
 		474C239A1B36AB8900D8628F /* seats_table_guest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seats_table_guest@2x.png"; sourceTree = "<group>"; };
 		474C239B1B36AB8900D8628F /* seats_table_vacant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seats_table_vacant@2x.png"; sourceTree = "<group>"; };
 		47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponEditViewController.swift; sourceTree = "<group>"; };
+		476A0C5B1B467FC700BB034C /* CouponDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponDetailViewController.swift; sourceTree = "<group>"; };
 		47737A3A1B2973D300F56C65 /* notteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47737A3E1B2973D300F56C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47737A3F1B2973D300F56C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,8 +194,6 @@
 		47D874B41B35C476002B1D24 /* top_information2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_information2@3x.png"; sourceTree = "<group>"; };
 		47D874B71B35CD84002B1D24 /* top_information3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_information3@2x.png"; sourceTree = "<group>"; };
 		47D874B81B35CD84002B1D24 /* top_information3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_information3@3x.png"; sourceTree = "<group>"; };
-		47FC68E11B3E9F590011737B /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
-		47FC68E21B3E9F590011737B /* CouponTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +233,7 @@
 		47737A311B2973D300F56C65 = {
 			isa = PBXGroup;
 			children = (
+				4724B8381B4293AC00EC687D /* font.ttf */,
 				47737A9E1B2983BC00F56C65 /* Frameworks */,
 				47737A3C1B2973D300F56C65 /* notteApp */,
 				47737A541B2973D300F56C65 /* notteAppTests */,
@@ -246,6 +257,7 @@
 				47737A4A1B2973D300F56C65 /* LaunchScreen.xib */,
 				47737A611B2973E500F56C65 /* RAMAnimatedTabBarController */,
 				47737A3F1B2973D300F56C65 /* AppDelegate.swift */,
+				47737A7C1B29747800F56C65 /* OriginalNavigationController.swift */,
 				47737A761B29740700F56C65 /* TopViewController.swift */,
 				4787C1DC1B2EFBC200F8A9B1 /* TopEditViewController.swift */,
 				4787C1E01B2F095B00F8A9B1 /* InfoTableViewCell.swift */,
@@ -253,14 +265,11 @@
 				47737A781B29741800F56C65 /* VacantSeatViewController.swift */,
 				4787C1DE1B2EFBD400F8A9B1 /* SeatsEditViewController.swift */,
 				47737A7A1B29743400F56C65 /* CouponViewController.swift */,
-				47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */,
 				470B31CA1B32CCD50079E9C1 /* CouponTableViewCell.swift */,
-				470B31CB1B32CCD60079E9C1 /* CouponTableViewCell.xib */,
-				47737A7C1B29747800F56C65 /* OriginalNavigationController.swift */,
-				47FC68E11B3E9F590011737B /* CouponTableViewController.swift */,
-				47FC68E21B3E9F590011737B /* CouponTableViewController.xib */,
+				47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */,
 				477576C21B3551F8007FB26F /* Images.xcassets */,
 				47737A3D1B2973D300F56C65 /* Supporting Files */,
+				476A0C5B1B467FC700BB034C /* CouponDetailViewController.swift */,
 			);
 			path = notteApp;
 			sourceTree = "<group>";
@@ -277,6 +286,12 @@
 				47061BFA1B393D7100714EC3 /* seats_counter_vacant@2x.png */,
 				47061BFB1B393D7100714EC3 /* seats_sofa_guest@2x.png */,
 				47061BFC1B393D7100714EC3 /* seats_sofa_vacant@2x.png */,
+				4724B82C1B4290EC00EC687D /* dotsline_bold@2x.png */,
+				4724B82D1B4290EC00EC687D /* dotsline_bold@3x.png */,
+				4724B82E1B4290EC00EC687D /* dotsline_slash@2x.png */,
+				4724B82F1B4290EC00EC687D /* dotsline_slash@3x.png */,
+				4724B8301B4290EC00EC687D /* dotsline_thin@2x.png */,
+				4724B8311B4290EC00EC687D /* dotsline_thin@3x.png */,
 				47D874B71B35CD84002B1D24 /* top_information3@2x.png */,
 				47D874B81B35CD84002B1D24 /* top_information3@3x.png */,
 				47061C091B39582A00714EC3 /* seats_bg@2x.png */,
@@ -494,16 +509,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4724B8391B4293D400EC687D /* font.ttf in Resources */,
 				47061C0B1B39582A00714EC3 /* seats_bg@2x.png in Resources */,
 				47061C071B3957E700714EC3 /* seats_counter@2x.png in Resources */,
 				47737A471B2973D300F56C65 /* Main.storyboard in Resources */,
 				47061BFE1B393D7100714EC3 /* seats_counter_vacant@2x.png in Resources */,
 				47061BFD1B393D7100714EC3 /* seats_counter_guest@2x.png in Resources */,
+				4724B8321B4290EC00EC687D /* dotsline_bold@2x.png in Resources */,
 				47737A4C1B2973D300F56C65 /* LaunchScreen.xib in Resources */,
 				4787C1DB1B2EE0C100F8A9B1 /* tabicon_white_top@3x.png in Resources */,
 				47D874A91B35C40D002B1D24 /* navicon_white_reload@2x.png in Resources */,
 				47D874B11B35C444002B1D24 /* navicon_white_coupon@2x.png in Resources */,
 				470B31C91B32B0CA0079E9C1 /* top-kari.png in Resources */,
+				4724B8341B4290EC00EC687D /* dotsline_slash@2x.png in Resources */,
 				47D874A11B35C3F7002B1D24 /* navicon_white_top@2x.png in Resources */,
 				474C239C1B36AB8900D8628F /* seats_table_guest@2x.png in Resources */,
 				47061C081B3957E700714EC3 /* seats_counter@3x.png in Resources */,
@@ -513,25 +531,27 @@
 				47D874B21B35C444002B1D24 /* navicon_white_coupon@3x.png in Resources */,
 				47D874AA1B35C40D002B1D24 /* navicon_white_reload@3x.png in Resources */,
 				47D8749D1B35C310002B1D24 /* admin_bg@2x.png in Resources */,
+				4724B8371B4290EC00EC687D /* dotsline_thin@3x.png in Resources */,
 				47D874B51B35C476002B1D24 /* top_information2@2x.png in Resources */,
 				47D874AD1B35C41B002B1D24 /* navicon_white_logo@2x.png in Resources */,
 				47061BFF1B393D7100714EC3 /* seats_sofa_guest@2x.png in Resources */,
 				47D874AE1B35C41B002B1D24 /* navicon_white_logo@3x.png in Resources */,
 				4787C1D21B2EE0AE00F8A9B1 /* tabicon_white_coupon@2x.png in Resources */,
 				4787C1D71B2EE0B700F8A9B1 /* tabicon_white_seats@3x.png in Resources */,
-				47FC68E41B3E9F590011737B /* CouponTableViewController.xib in Resources */,
 				47D8749E1B35C310002B1D24 /* admin_bg@3x.png in Resources */,
 				4787C1DA1B2EE0C100F8A9B1 /* tabicon_white_top@2x.png in Resources */,
 				47D874BA1B35CD84002B1D24 /* top_information3@3x.png in Resources */,
-				470B31CD1B32CCD60079E9C1 /* CouponTableViewCell.xib in Resources */,
 				4787C1D61B2EE0B700F8A9B1 /* tabicon_white_seats@2x.png in Resources */,
 				47D874A21B35C3F7002B1D24 /* navicon_white_top@3x.png in Resources */,
 				47D874A61B35C400002B1D24 /* navicon_white_seats@3x.png in Resources */,
+				4724B8361B4290EC00EC687D /* dotsline_thin@2x.png in Resources */,
+				4724B8331B4290EC00EC687D /* dotsline_bold@3x.png in Resources */,
 				474C23941B36A01B00D8628F /* top_bg2@2x.png in Resources */,
 				474C23951B36A01B00D8628F /* top_bg2@3x.png in Resources */,
 				4787C1D31B2EE0AE00F8A9B1 /* tabicon_white_coupon@3x.png in Resources */,
 				47061C0C1B39582A00714EC3 /* seats_bg@3x.png in Resources */,
 				474C23911B369FEA00D8628F /* splash_bg@3x.png in Resources */,
+				4724B8351B4290EC00EC687D /* dotsline_slash@3x.png in Resources */,
 				47D874B61B35C476002B1D24 /* top_information2@3x.png in Resources */,
 				477576C31B3551F8007FB26F /* Images.xcassets in Resources */,
 				47061C001B393D7100714EC3 /* seats_sofa_vacant@2x.png in Resources */,
@@ -563,6 +583,7 @@
 				47737A791B29741800F56C65 /* VacantSeatViewController.swift in Sources */,
 				47737A731B2973E500F56C65 /* RAMTransitionItemAnimation.swift in Sources */,
 				4787C1E11B2F095B00F8A9B1 /* InfoTableViewCell.swift in Sources */,
+				476A0C5C1B467FC700BB034C /* CouponDetailViewController.swift in Sources */,
 				47737A751B2973E500F56C65 /* RAMItemAnimationProtocol.swift in Sources */,
 				4787C1DD1B2EFBC200F8A9B1 /* TopEditViewController.swift in Sources */,
 				47737A7B1B29743400F56C65 /* CouponViewController.swift in Sources */,
@@ -573,7 +594,6 @@
 				470B31CC1B32CCD60079E9C1 /* CouponTableViewCell.swift in Sources */,
 				47737A711B2973E500F56C65 /* RAMFumeAnimation.swift in Sources */,
 				47737A6F1B2973E500F56C65 /* RAMBounceAnimation.swift in Sources */,
-				47FC68E31B3E9F590011737B /* CouponTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

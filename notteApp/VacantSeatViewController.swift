@@ -27,6 +27,9 @@ class VacantSeatViewController: UIViewController {
     @IBOutlet weak var seat13: UIImageView!
     @IBOutlet weak var seat14: UIImageView!
     
+    //残席数を見るボタン
+    @IBOutlet weak var showButton: UIButton!
+    
     //Seatsの情報をストア
     var allSeatsData: NSMutableArray = NSMutableArray()
     //seatの空き情報のための変数
@@ -71,6 +74,8 @@ class VacantSeatViewController: UIViewController {
         vacantDataListCounter = [1,1,1,1]
         vacantDataListSofa = [1]
         self.makeMyWindow()
+        //残席数見るボタンの設定
+        self.showButton.layer.cornerRadius = 8.0
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -297,7 +302,7 @@ class VacantSeatViewController: UIViewController {
         // ボタンを作成する.
         myWindowButton.frame = CGRectMake(0, 0, 100, 30)
         myWindowButton.backgroundColor = UIColor.grayColor()
-        myWindowButton.setTitle("Close", forState: .Normal)
+        myWindowButton.setTitle("close", forState: .Normal)
         myWindowButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         myWindowButton.layer.masksToBounds = true
         myWindowButton.layer.cornerRadius = 8.0

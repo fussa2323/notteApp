@@ -1,14 +1,14 @@
 //
-//  OriginalNavigationController.swift
+//  CouponDetailViewController.swift
 //  notteApp
 //
-//  Created by Yohei Fusayasu on 6/11/15.
+//  Created by Yohei Fusayasu on 7/3/15.
 //  Copyright (c) 2015 yohei2323. All rights reserved.
 //
 
 import UIKit
 
-class OriginalNavigationController: UINavigationController {
+class CouponDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,5 @@ class OriginalNavigationController: UINavigationController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }
