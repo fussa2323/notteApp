@@ -68,48 +68,38 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
 
-    
-    /*
-    Cellが選択された際に呼び出される.
-    */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
     
-    /*
-    Cellの総数を返す.
-    */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allCouponData.count
     }
-    
-    /*
-    Cellに値を設定する.
-    */
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
         let cell:CouponTableViewCell = (tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CouponTableViewCell)
         let coupon:PFObject = (self.allCouponData.objectAtIndex(indexPath.row) as! PFObject)
 
-        //alpha = 0
-        
         //labelに値を格納
         cell.serviceLabel.text = coupon.objectForKey("product_name") as? String
         cell.priceLabel.text = coupon.objectForKey("price") as? String
         cell.dateLabel.text = coupon.objectForKey("limit") as? String
         cell.detailLabel.text = coupon.objectForKey("detail") as? String
-        
-        
-        
-        UIView.animateWithDuration(0.5, animations: {
-            //alpha = 1
-    
-        })
-        
+  
         return cell
     }
     
-
-    
+    //選択したCellをCouponDetailViewControllerにデータを渡す
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "detailPath") {
+            let couponDetailViewContoroller: CouponDetailViewController = segue.destinationViewController as! CouponDetailViewController
+            var ip: NSIndexPath! = self.tableView.indexPathForSelectedRow()
+            couponDetailViewContoroller.param = self.allCouponData.objectAtIndex(ip.row)
+        }else{
+            println("nothing to do")
+        }
+    }
+        
 }

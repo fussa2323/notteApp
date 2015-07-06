@@ -15,10 +15,17 @@ class DetaiViewController: UIViewController {
     var param:AnyObject!
     var infoQuery: PFQuery = PFQuery(className: "Info")
     @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var createdAtLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailTextView.text = param.objectForKey("infoDetail") as? String
+        self.titleTextView.text = param.objectForKey("infoTitle") as? String
+        //CreatedAtの表示
+        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        self.createdAtLabel.text = dateFormatter.stringFromDate(param.createdAt!!)
     }
 
     override func didReceiveMemoryWarning() {

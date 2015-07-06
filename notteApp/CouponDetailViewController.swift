@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class CouponDetailViewController: UIViewController {
-
+    
+    var param:AnyObject!
+    var couponQuery: PFQuery = PFQuery(className: "Info")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

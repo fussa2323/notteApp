@@ -267,9 +267,9 @@
 				47737A7A1B29743400F56C65 /* CouponViewController.swift */,
 				470B31CA1B32CCD50079E9C1 /* CouponTableViewCell.swift */,
 				47619A831B3D6C2C009F32B1 /* CouponEditViewController.swift */,
+				476A0C5B1B467FC700BB034C /* CouponDetailViewController.swift */,
 				477576C21B3551F8007FB26F /* Images.xcassets */,
 				47737A3D1B2973D300F56C65 /* Supporting Files */,
-				476A0C5B1B467FC700BB034C /* CouponDetailViewController.swift */,
 			);
 			path = notteApp;
 			sourceTree = "<group>";

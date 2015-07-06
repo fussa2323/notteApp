@@ -72,23 +72,14 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
         super.didReceiveMemoryWarning()
     }
 
-    /*
-    Cellが選択された際に呼び出される.
-    */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
     
-    /*
-    Cellの総数を返す.
-    */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allInfoData.count
     }
-    
-    /*
-    Cellに値を設定する.
-    */
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
