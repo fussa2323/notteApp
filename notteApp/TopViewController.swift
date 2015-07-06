@@ -13,6 +13,7 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var accessMapButton: UIButton!
     
     //Information 用のデータ定義
     var allInfoData:NSMutableArray = NSMutableArray()
