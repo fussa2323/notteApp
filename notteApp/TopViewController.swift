@@ -27,9 +27,9 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
         var findInfoData: PFQuery = PFQuery(className: "Info")
         
         //クエリで取得したデータに対しての処理
+        SVProgressHUD.show()
         findInfoData.findObjectsInBackgroundWithBlock{
             (objects: [AnyObject]?, error: NSError?) -> Void in
-            
             if error == nil {
                 println("Successfully retrieved \(objects!.count) scores.")
                 if let objects = objects as? [PFObject] {
@@ -37,6 +37,7 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
                         self.allInfoData.addObject(object)
                     }
                 }
+                SVProgressHUD.dismiss()
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
@@ -46,6 +47,7 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
             self.allInfoData = NSMutableArray(array: array)
             self.tableView.reloadData()
         }
+        
     }
 
     
@@ -67,6 +69,10 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        //AccessMapButton
+        self.accessMapButton.layer.borderWidth = 0.311
+        self.accessMapButton.layer.borderColor = UIColor.whiteColor().CGColor
+        self.accessMapButton.layer.cornerRadius = 3.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -121,6 +127,16 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
+    
+    //SVProgressHUD method
+    func dispatch_async_main(block: () -> ()) {
+        dispatch_async(dispatch_get_main_queue(), block)
+    }
+    
+    func dispatch_async_global(block: () -> ()) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+    }
+
     
 
 

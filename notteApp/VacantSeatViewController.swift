@@ -58,6 +58,10 @@ class VacantSeatViewController: UIViewController {
     private var vacantDataCountSofa = 0
     private var myTextView: UITextView!
     
+    //Statusの情報をストア
+    var statusData: NSMutableArray = NSMutableArray()
+    @IBOutlet weak var statusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Title画像
@@ -92,14 +96,18 @@ class VacantSeatViewController: UIViewController {
     @IBAction func loadSeatsData(){
         //初期化
         allSeatsData.removeAllObjects()
+        statusData.removeAllObjects()
+        
         vacantDataCountTable = 0
         vacantDataCountCounter = 0
         vacantDataCountSofa = 0
         
         //タイムライン用のクエリを定義
         var findSeatsData: PFQuery = PFQuery(className: "Seats")
+        var findStatusData: PFQuery = PFQuery(className: "Status")
         
         //クエリで取得したデータに対しての処理
+        SVProgressHUD.show()
         findSeatsData.findObjectsInBackgroundWithBlock{
             (objects: [AnyObject]?, error: NSError?) -> Void in
             
@@ -110,6 +118,7 @@ class VacantSeatViewController: UIViewController {
                         self.allSeatsData.addObject(object)
                     }
                 }
+                SVProgressHUD.dismiss()
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
@@ -117,6 +126,23 @@ class VacantSeatViewController: UIViewController {
             //描画する関数を呼び出し
             self.drawSeatsVacData()
         }
+        
+        //クエリで取得したデータに対しての処理
+        findStatusData.findObjectsInBackgroundWithBlock{
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                println("Successfully retrieved \(objects!.count) scores.")
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        self.statusData.addObject(object)
+                    }
+                }
+            } else {
+                println("Error: \(error!) \(error!.userInfo!)")
+            }
+        }
+
     }
     
     //Seatの空き情報を描画
@@ -256,6 +282,13 @@ class VacantSeatViewController: UIViewController {
         }
         //vacantDataCouner用のTextを更新
         myTextView.text = "テーブル席 : \(vacantDataCountTable) / 9\n\nカウンター席 : \(vacantDataCountCounter) / 4\n\nソファー席 : \(vacantDataCountSofa) / 1"
+        
+        //Statusを描画
+        if statusData.objectAtIndex(0).objectForKey("status") as! Int == 0 {
+            self.statusLabel.text = "Closed."
+        }else{
+            self.statusLabel.text = "We are open."
+        }
     }
     
     //vacantDataCounter用のWindowを生成

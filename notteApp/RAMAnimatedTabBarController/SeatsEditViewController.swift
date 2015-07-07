@@ -39,13 +39,33 @@ class SeatsEditViewController: UIViewController {
     var sofaVacantImage: UIImage = UIImage(named: "seats_sofa_vacant.png")!
     var sofaGuestImage: UIImage = UIImage(named: "seats_sofa_guest.png")!
     
+    //Statusの情報をストア
+    var statusData: NSMutableArray = NSMutableArray()
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Edit SeatsInfo"
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadSeatsData()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     //Seatsテーブルのデータをすべて読み込む
     @IBAction func loadSeatsData(){
         //初期化
         allSeatsData.removeAllObjects()
+        statusData.removeAllObjects()
         
-        //タイムライン用のクエリを定義
+        //クエリを定義
         var findSeatsData: PFQuery = PFQuery(className: "Seats")
+        var findStatusData: PFQuery = PFQuery(className: "Status")
         
         //クエリで取得したデータに対しての処理
         findSeatsData.findObjectsInBackgroundWithBlock{
@@ -64,6 +84,22 @@ class SeatsEditViewController: UIViewController {
             
             //描画する関数を呼び出し
             self.drawSeatsVacData()
+        }
+        
+        //クエリで取得したデータに対しての処理
+        findStatusData.findObjectsInBackgroundWithBlock{
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                println("Successfully retrieved \(objects!.count) scores.")
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        self.statusData.addObject(object)
+                    }
+                }
+            } else {
+                println("Error: \(error!) \(error!.userInfo!)")
+            }
         }
     }
     
@@ -160,6 +196,12 @@ class SeatsEditViewController: UIViewController {
                 break
             }
         }
+        //Statusを描画
+        if statusData.objectAtIndex(0).objectForKey("status") as! Int == 0 {
+            self.statusLabel.text = "Closed."
+        }else{
+            self.statusLabel.text = "We are open."
+        }
     }
     
     //DB上のseat_IdをもつSeatのVacデータを更新する
@@ -193,18 +235,41 @@ class SeatsEditViewController: UIViewController {
         self.loadSeatsData()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Edit SeatsInfo"
+    @IBAction func switchStatus(sender: AnyObject) {
+        var status:PFObject = PFObject(className: "Status")
+        
+        status["status"] = 1
+        
+        status.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                
+            } else {
+                
+            }
+        }
+
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    @IBAction func openStatusButton(sender: AnyObject) {
+        var statusQuery:PFQuery =  PFQuery(className: "Status")
+        var statusDataObjectId: String = statusData.objectAtIndex(0).objectId!!
+        statusQuery.getObjectInBackgroundWithId(statusDataObjectId) {
+            (targetStatus: PFObject?, error: NSError?) -> Void in
+            if error != nil {
+                println(error)
+            } else if let targetStatus = targetStatus {
+                var status:Int = (targetStatus.objectForKey("status") as? Int)!
+                if (status == 0){
+                    targetStatus["status"] = 1
+                    targetStatus.saveInBackground()
+                }else{
+                    targetStatus["status"] = 0
+                    targetStatus.saveInBackground()
+                }
+            }
+        }//Closer
         self.loadSeatsData()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
 }

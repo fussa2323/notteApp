@@ -47,6 +47,7 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
         var findCouponData: PFQuery = PFQuery(className: "Coupon")
         
         //クエリで取得したデータに対しての処理
+        SVProgressHUD.show()
         findCouponData.findObjectsInBackgroundWithBlock{
             (objects: [AnyObject]?, error: NSError?) -> Void in
             
@@ -57,6 +58,7 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
                         self.allCouponData.addObject(object)
                     }
                 }
+                SVProgressHUD.dismiss()
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
