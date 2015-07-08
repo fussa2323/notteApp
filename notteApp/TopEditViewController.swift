@@ -13,6 +13,9 @@ class TopEditViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var linkTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Edit Information"
@@ -26,6 +29,7 @@ class TopEditViewController: UIViewController {
         var info:PFObject = PFObject(className: "Info")
         info["infoTitle"] = titleTextField.text
         info["infoDetail"] = detailTextView.text
+        info["infoLink"] = linkTextField.text
 
         info.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in

@@ -280,14 +280,16 @@ class VacantSeatViewController: UIViewController {
                 break
             }
         }
-        //vacantDataCouner用のTextを更新
-        myTextView.text = "テーブル席 : \(vacantDataCountTable) / 9\n\nカウンター席 : \(vacantDataCountCounter) / 4\n\nソファー席 : \(vacantDataCountSofa) / 1"
         
         //Statusを描画
         if statusData.objectAtIndex(0).objectForKey("status") as! Int == 0 {
             self.statusLabel.text = "Closed."
+            //vacantDataCouner用のTextを更新
+            myTextView.text = "ただいまの時間は営業時間外、または団体様の貸し切りのため閉店しております。"
         }else{
             self.statusLabel.text = "We are open."
+            //vacantDataCouner用のTextを更新
+            myTextView.text = "テーブル席 : \(vacantDataCountTable) / 9\n\nカウンター席 : \(vacantDataCountCounter) / 4\n\nソファー席 : \(vacantDataCountSofa) / 1"
         }
     }
     

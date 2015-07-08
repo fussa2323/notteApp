@@ -17,15 +17,18 @@ class DetaiViewController: UIViewController {
     @IBOutlet weak var detailTextView: UITextView!
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var linkTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailTextView.text = param.objectForKey("infoDetail") as? String
         self.titleTextView.text = param.objectForKey("infoTitle") as? String
+        self.linkTextView.text = param.objectForKey("infoLink") as? String
         //CreatedAtの表示
         var dateFormatter: NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
         self.createdAtLabel.text = dateFormatter.stringFromDate(param.createdAt!!)
+        self.linkTextView.dataDetectorTypes = UIDataDetectorTypes.Link
     }
 
     override func didReceiveMemoryWarning() {
