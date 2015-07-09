@@ -10,19 +10,31 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="splash_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="POb-dk-w5T">
-                    <rect key="frame" x="0.0" y="-94" width="480" height="668"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="POb-dk-w5T">
+                    <rect key="frame" x="0.0" y="-2" width="480" height="484"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="POb-dk-w5T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3bA-IC-uqr"/>
                 <constraint firstAttribute="centerX" secondItem="POb-dk-w5T" secondAttribute="centerX" id="8uQ-Db-0JX"/>
-                <constraint firstAttribute="trailing" secondItem="POb-dk-w5T" secondAttribute="trailing" id="9qL-QJ-3H5"/>
-                <constraint firstItem="POb-dk-w5T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="B4x-9K-qJd"/>
+                <constraint firstAttribute="trailing" secondItem="POb-dk-w5T" secondAttribute="trailing" constant="-2" id="9qL-QJ-3H5"/>
+                <constraint firstItem="POb-dk-w5T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-2" id="B4x-9K-qJd"/>
                 <constraint firstAttribute="centerY" secondItem="POb-dk-w5T" secondAttribute="centerY" id="O9m-w2-hEw"/>
+                <constraint firstItem="POb-dk-w5T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-2" id="UmO-Fp-1gK"/>
+                <constraint firstAttribute="bottom" secondItem="POb-dk-w5T" secondAttribute="bottom" constant="-2" id="eRj-Il-V6e"/>
+                <constraint firstAttribute="trailing" secondItem="POb-dk-w5T" secondAttribute="trailing" id="wHB-ui-Cn1"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="8uQ-Db-0JX"/>
+                    <exclude reference="9qL-QJ-3H5"/>
+                    <exclude reference="B4x-9K-qJd"/>
+                    <exclude reference="O9m-w2-hEw"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>

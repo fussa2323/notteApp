@@ -65,7 +65,7 @@ class VacantSeatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Title画像
-        let image = UIImage(named: "navicon_white_seats.png")
+        let image = UIImage(named: "navicon_seats.png")
         let imageView = UIImageView(image: image)
         imageView.frame = CGRectMake(0, 0, 36, 33)
         self.navigationItem.titleView = imageView
@@ -118,11 +118,10 @@ class VacantSeatViewController: UIViewController {
                         self.allSeatsData.addObject(object)
                     }
                 }
-                SVProgressHUD.dismiss()
+//                SVProgressHUD.dismiss()
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
-            
             //描画する関数を呼び出し
             self.drawSeatsVacData()
         }
@@ -138,9 +137,12 @@ class VacantSeatViewController: UIViewController {
                         self.statusData.addObject(object)
                     }
                 }
+                SVProgressHUD.dismiss()
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
+            //描画する関数を呼び出し
+            self.drawStatusData()
         }
 
     }
@@ -280,16 +282,23 @@ class VacantSeatViewController: UIViewController {
                 break
             }
         }
-        
         //Statusを描画
         if statusData.objectAtIndex(0).objectForKey("status") as! Int == 0 {
-            self.statusLabel.text = "Closed."
             //vacantDataCouner用のTextを更新
             myTextView.text = "ただいまの時間は営業時間外、または団体様の貸し切りのため閉店しております。"
         }else{
-            self.statusLabel.text = "We are open."
             //vacantDataCouner用のTextを更新
             myTextView.text = "テーブル席 : \(vacantDataCountTable) / 9\n\nカウンター席 : \(vacantDataCountCounter) / 4\n\nソファー席 : \(vacantDataCountSofa) / 1"
+        }
+
+    }
+    
+    func drawStatusData(){
+        //Statusを描画
+        if statusData.objectAtIndex(0).objectForKey("status") as! Int == 0 {
+            self.statusLabel.text = "Closed."
+        }else{
+            self.statusLabel.text = "We are open."
         }
     }
     

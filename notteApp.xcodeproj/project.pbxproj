@@ -77,6 +77,12 @@
 		4787C1E11B2F095B00F8A9B1 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787C1E01B2F095B00F8A9B1 /* InfoTableViewCell.swift */; };
 		4787C1E31B2F14C600F8A9B1 /* DetaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787C1E21B2F14C600F8A9B1 /* DetaiViewController.swift */; };
 		47A139FA1B4C110F0053A245 /* notte-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47A139F91B4C110F0053A245 /* notte-map.jpg */; };
+		47B208DE1B4E4C4700B54A35 /* navicon_coupon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B208D81B4E4C4700B54A35 /* navicon_coupon@2x.png */; };
+		47B208DF1B4E4C4700B54A35 /* navicon_coupon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B208D91B4E4C4700B54A35 /* navicon_coupon@3x.png */; };
+		47B208E01B4E4C4700B54A35 /* navicon_seats@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B208DA1B4E4C4700B54A35 /* navicon_seats@2x.png */; };
+		47B208E11B4E4C4700B54A35 /* navicon_seats@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B208DB1B4E4C4700B54A35 /* navicon_seats@3x.png */; };
+		47B208E21B4E4C4700B54A35 /* navicon_top@@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B208DC1B4E4C4700B54A35 /* navicon_top@@2x.png */; };
+		47B208E31B4E4C4700B54A35 /* navicon_top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B208DD1B4E4C4700B54A35 /* navicon_top@3x.png */; };
 		47D8749D1B35C310002B1D24 /* admin_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D8749B1B35C310002B1D24 /* admin_bg@2x.png */; };
 		47D8749E1B35C310002B1D24 /* admin_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D8749C1B35C310002B1D24 /* admin_bg@3x.png */; };
 		47D874A11B35C3F7002B1D24 /* navicon_white_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D8749F1B35C3F7002B1D24 /* navicon_white_top@2x.png */; };
@@ -182,6 +188,12 @@
 		4787C1E01B2F095B00F8A9B1 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoTableViewCell.swift; path = RAMAnimatedTabBarController/InfoTableViewCell.swift; sourceTree = "<group>"; };
 		4787C1E21B2F14C600F8A9B1 /* DetaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetaiViewController.swift; sourceTree = "<group>"; };
 		47A139F91B4C110F0053A245 /* notte-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "notte-map.jpg"; sourceTree = "<group>"; };
+		47B208D81B4E4C4700B54A35 /* navicon_coupon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navicon_coupon@2x.png"; sourceTree = "<group>"; };
+		47B208D91B4E4C4700B54A35 /* navicon_coupon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navicon_coupon@3x.png"; sourceTree = "<group>"; };
+		47B208DA1B4E4C4700B54A35 /* navicon_seats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navicon_seats@2x.png"; sourceTree = "<group>"; };
+		47B208DB1B4E4C4700B54A35 /* navicon_seats@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navicon_seats@3x.png"; sourceTree = "<group>"; };
+		47B208DC1B4E4C4700B54A35 /* navicon_top@@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navicon_top@@2x.png"; sourceTree = "<group>"; };
+		47B208DD1B4E4C4700B54A35 /* navicon_top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navicon_top@3x.png"; sourceTree = "<group>"; };
 		47D8749B1B35C310002B1D24 /* admin_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "admin_bg@2x.png"; sourceTree = "<group>"; };
 		47D8749C1B35C310002B1D24 /* admin_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "admin_bg@3x.png"; sourceTree = "<group>"; };
 		47D8749F1B35C3F7002B1D24 /* navicon_white_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navicon_white_top@2x.png"; sourceTree = "<group>"; };
@@ -297,6 +309,12 @@
 				47061C051B3957E700714EC3 /* seats_counter@2x.png */,
 				47061C061B3957E700714EC3 /* seats_counter@3x.png */,
 				47061BF91B393D7100714EC3 /* seats_counter_guest@2x.png */,
+				47B208D81B4E4C4700B54A35 /* navicon_coupon@2x.png */,
+				47B208D91B4E4C4700B54A35 /* navicon_coupon@3x.png */,
+				47B208DA1B4E4C4700B54A35 /* navicon_seats@2x.png */,
+				47B208DB1B4E4C4700B54A35 /* navicon_seats@3x.png */,
+				47B208DC1B4E4C4700B54A35 /* navicon_top@@2x.png */,
+				47B208DD1B4E4C4700B54A35 /* navicon_top@3x.png */,
 				47061BFA1B393D7100714EC3 /* seats_counter_vacant@2x.png */,
 				47061BFB1B393D7100714EC3 /* seats_sofa_guest@2x.png */,
 				47061BFC1B393D7100714EC3 /* seats_sofa_vacant@2x.png */,
@@ -543,17 +561,21 @@
 				47061BFD1B393D7100714EC3 /* seats_counter_guest@2x.png in Resources */,
 				4724B8321B4290EC00EC687D /* dotsline_bold@2x.png in Resources */,
 				47737A4C1B2973D300F56C65 /* LaunchScreen.xib in Resources */,
+				47B208E31B4E4C4700B54A35 /* navicon_top@3x.png in Resources */,
 				4787C1DB1B2EE0C100F8A9B1 /* tabicon_white_top@3x.png in Resources */,
 				47D874A91B35C40D002B1D24 /* navicon_white_reload@2x.png in Resources */,
 				47D874B11B35C444002B1D24 /* navicon_white_coupon@2x.png in Resources */,
+				47B208E11B4E4C4700B54A35 /* navicon_seats@3x.png in Resources */,
 				470B31C91B32B0CA0079E9C1 /* top-kari.png in Resources */,
 				4724B8341B4290EC00EC687D /* dotsline_slash@2x.png in Resources */,
 				47D874A11B35C3F7002B1D24 /* navicon_white_top@2x.png in Resources */,
 				474C239C1B36AB8900D8628F /* seats_table_guest@2x.png in Resources */,
 				47A139FA1B4C110F0053A245 /* notte-map.jpg in Resources */,
+				47B208DE1B4E4C4700B54A35 /* navicon_coupon@2x.png in Resources */,
 				47061C081B3957E700714EC3 /* seats_counter@3x.png in Resources */,
 				474C239D1B36AB8900D8628F /* seats_table_vacant@2x.png in Resources */,
 				470B31C71B32AAA30079E9C1 /* top_information@3x.png in Resources */,
+				47B208DF1B4E4C4700B54A35 /* navicon_coupon@3x.png in Resources */,
 				47D874A51B35C400002B1D24 /* navicon_white_seats@2x.png in Resources */,
 				47D874B21B35C444002B1D24 /* navicon_white_coupon@3x.png in Resources */,
 				47D874AA1B35C40D002B1D24 /* navicon_white_reload@3x.png in Resources */,
@@ -577,7 +599,9 @@
 				474C23951B36A01B00D8628F /* top_bg2@3x.png in Resources */,
 				4787C1D31B2EE0AE00F8A9B1 /* tabicon_white_coupon@3x.png in Resources */,
 				47061C0C1B39582A00714EC3 /* seats_bg@3x.png in Resources */,
+				47B208E01B4E4C4700B54A35 /* navicon_seats@2x.png in Resources */,
 				474C23911B369FEA00D8628F /* splash_bg@3x.png in Resources */,
+				47B208E21B4E4C4700B54A35 /* navicon_top@@2x.png in Resources */,
 				4724B8351B4290EC00EC687D /* dotsline_slash@3x.png in Resources */,
 				47D874B61B35C476002B1D24 /* top_information2@3x.png in Resources */,
 				477576C31B3551F8007FB26F /* Images.xcassets in Resources */,

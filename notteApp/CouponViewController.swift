@@ -18,7 +18,7 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         //Title画像
-        let image = UIImage(named: "navicon_white_coupon.png")
+        let image = UIImage(named: "navicon_coupon.png")
         let imageView = UIImageView(image: image)
         imageView.frame = CGRectMake(0, 0, 40, 33)
         self.navigationItem.titleView = imageView

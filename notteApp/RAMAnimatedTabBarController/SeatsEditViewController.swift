@@ -81,7 +81,6 @@ class SeatsEditViewController: UIViewController {
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
-            
             //描画する関数を呼び出し
             self.drawSeatsVacData()
         }
@@ -100,6 +99,8 @@ class SeatsEditViewController: UIViewController {
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
+            //描画する関数を呼び出し
+            self.drawStatusData()
         }
     }
     
@@ -196,6 +197,9 @@ class SeatsEditViewController: UIViewController {
                 break
             }
         }
+    }
+    
+    func drawStatusData(){
         //Statusを描画
         if statusData.objectAtIndex(0).objectForKey("status") as! Int == 0 {
             self.statusLabel.text = "Closed."

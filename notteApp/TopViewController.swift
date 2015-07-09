@@ -62,7 +62,7 @@ class TopViewController: UIViewController, UITableViewDataSource, UITableViewDel
         self.navigationController?.navigationBar.backgroundColor =  UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         self.tabBarController?.tabBar.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         //Title画像
-        let image = UIImage(named: "navicon_white_top.png")
+        let image = UIImage(named: "navicon_top.png")
         let imageView = UIImageView(image: image)
         imageView.frame = CGRectMake(0, 0, 36, 33)
         self.navigationItem.titleView = imageView
