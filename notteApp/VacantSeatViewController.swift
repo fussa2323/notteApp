@@ -108,25 +108,6 @@ class VacantSeatViewController: UIViewController {
         
         //クエリで取得したデータに対しての処理
         SVProgressHUD.show()
-        findSeatsData.findObjectsInBackgroundWithBlock{
-            (objects: [AnyObject]?, error: NSError?) -> Void in
-            
-            if error == nil {
-                println("Successfully retrieved \(objects!.count) scores.")
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        self.allSeatsData.addObject(object)
-                    }
-                }
-//                SVProgressHUD.dismiss()
-            } else {
-                println("Error: \(error!) \(error!.userInfo!)")
-            }
-            //描画する関数を呼び出し
-            self.drawSeatsVacData()
-        }
-        
-        //クエリで取得したデータに対しての処理
         findStatusData.findObjectsInBackgroundWithBlock{
             (objects: [AnyObject]?, error: NSError?) -> Void in
             
@@ -137,14 +118,32 @@ class VacantSeatViewController: UIViewController {
                         self.statusData.addObject(object)
                     }
                 }
-                SVProgressHUD.dismiss()
+//                SVProgressHUD.dismiss()
             } else {
                 println("Error: \(error!) \(error!.userInfo!)")
             }
             //描画する関数を呼び出し
             self.drawStatusData()
         }
-
+        
+        //クエリで取得したデータに対しての処理
+        findSeatsData.findObjectsInBackgroundWithBlock{
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                println("Successfully retrieved \(objects!.count) scores.")
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        self.allSeatsData.addObject(object)
+                    }
+                }
+                SVProgressHUD.dismiss()
+            } else {
+                println("Error: \(error!) \(error!.userInfo!)")
+            }
+            //描画する関数を呼び出し
+            self.drawSeatsVacData()
+        }
     }
     
     //Seatの空き情報を描画
